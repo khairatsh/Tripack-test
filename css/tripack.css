@@ -28,13 +28,13 @@ body{
   
   .scroll-top i {
     font-size: 24px;
-    color: #fff;
+    color: var(--white);
     line-height: 0;
   }
   
   .scroll-top:hover {
     background: var(--primary-color);
-    color: #fff;
+    color: var(--white);
   }
   
   .scroll-top.active {
@@ -183,16 +183,19 @@ background-color: var(--primary-color);
 .landing{
     background-color: var(--primary-color);
     color: var(--white);
-}
-.relative{
+    height: 30rem;
     position: relative;
-    height: 450px;
 }
-.absolute{
-    position: absolute;
-    bottom: 0px;
-    right: 200px;
-    background-color: var(--primary-color-opa);
+.slogan{
+  max-width: 600px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-color-opa);
+}
+.slogancontainer{
+  border: 1px solid rgba(255, 255, 255, 0.7)
 }
 
 
@@ -399,11 +402,13 @@ background-color: var(--primary-color);
   }
 
   footer a{
+    text-decoration: underline;
+  }
+  .footerlogo{
     text-decoration: none;
   }
 
   footer span{
-    border-bottom: solid 2px #fff;
     padding-bottom: 18px;
   }
   
@@ -452,6 +457,7 @@ background-color: var(--primary-color);
     font-weight: bold;
     position: relative;
     padding-bottom: 12px;
+    text-align: center;
   }
   
   .footer .footer-links {
@@ -472,14 +478,12 @@ background-color: var(--primary-color);
   }
   
   .footer .footer-links ul li {
-    padding: 10px 0;
+    padding: 10px;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   
-  .footer .footer-links ul li:first-child {
-    padding-top: 0;
-  }
   
   .footer .footer-links ul a {
     color: rgba(255, 255, 255, 0.6);
@@ -498,6 +502,7 @@ background-color: var(--primary-color);
   
   .footer .copyright {
     text-align: center;
+    color: var(--secondary-color);
   }
   
   .footer .credits {
